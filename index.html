@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +11,167 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
+
 <body>
-    
+    <header class="w-3/4 mx-auto pt-8 pb-4">
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl">AREA<span class="text-red-700">.calculator</span></a>
+            </div>
+            <div class="flex-none">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a class="capitalize font-bold" href="facebook.com/joychandraudayy" target="_blank">facebook</a>
+                    </li>
+                    <li><a class="capitalize font-bold" href="https://www.linkedin.com/in/joychandrauday/"
+                            target="_blank">linkedin</a></li>
+                    <li><a class="capitalize font-bold" href="https://www.github.com/joychandrauday/"
+                            target="_blank">github</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="pt-8">
+        <div class="main-banner lg:flex container mx-auto">
+            <div class="shape-container basis-3/4">
+                <div class="shape-row lg:grid grid-cols-3 gap-3">
+                    <div class="shape">
+                        <div class="card w-auto bg-base-100 shadow-xl">
+                            <figure class="px-4 pt-4">
+                                <img src="images/triangle.png" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title capitalize font-bold text-3xl">triangle</h2>
+                                <p>Area (A) = 0.5*base*height</p>
+                                <div class="parameter-input flex items-center">
+                                    <input type="number" id="triangleBase" class="w-24 px-4 py-2 rounded bg-slate-300 mr-2" placeholder="Base"><span class="mr-4">cm</span>
+                                    <input type="number" id="triangleHeight" class="w-24 px-4 py-2 rounded bg-slate-300 ml-4 mr-2" placeholder="Height"><span>cm</span>
+                                </div>
+                                <p class="capitalize font-semibold">the area of the triangle is <span  id="totalArea" class="font-extrabold" > ? </span>cm<sup>2</sup></p>
+                                <div class="card-actions w-full mt-4">
+                                    <button onclick="calculateTriangle()" class="btn btn-primary capitalize w-full">calculate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shape">
+                        <div class="card w-auto bg-base-100 shadow-xl">
+                            <figure class="px-4 pt-4">
+                                <img src="images/rectangle.png" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title capitalize font-bold text-3xl">rectangle</h2>
+                                <p>Area (A) = width*length</p>
+                                <div class="parameter-input flex items-center">
+                                    <input type="number" id="rectangleWidth" class="w-24 px-4 py-2 rounded bg-slate-300 mr-2" placeholder="width"><span class="mr-4">cm</span>
+                                    <input type="number" id="rectangleLength" class="w-24 px-4 py-2 rounded bg-slate-300 ml-4 mr-2" placeholder="Length"><span>cm</span>
+                                </div>
+                                <p class="capitalize font-semibold">the area of the rectangle is <span  id="totalAreaRectangle" class="font-extrabold" > ? </span>cm<sup>2</sup></p>
+                                <div class="card-actions w-full mt-4">
+                                    <button onclick="calculateRectangle()" class="btn btn-primary capitalize w-full">calculate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shape">
+                        <div class="card w-auto bg-base-100 shadow-xl">
+                            <figure class="px-4 pt-4">
+                                <img src="images/triangle.png" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title capitalize font-bold text-3xl">triangle</h2>
+                                <p>Area (A) = 0.5*base*height</p>
+                                <div class="parameter-input flex items-center">
+                                    <input type="number" id="triangleBase" class="w-24 px-4 py-2 rounded bg-slate-300 mr-2" placeholder="Base"><span class="mr-4">cm</span>
+                                    <input type="number" id="triangleHeight" class="w-24 px-4 py-2 rounded bg-slate-300 ml-4 mr-2" placeholder="Height"><span>cm</span>
+                                </div>
+                                <p class="capitalize font-semibold">the area of the triangle is <span  id="totalArea" class="font-extrabold" > ? </span>cm<sup>2</sup></p>
+                                <div class="card-actions w-full mt-4">
+                                    <button onclick="calculateTriangle()" class="btn btn-primary capitalize w-full">calculate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shape">
+                        <div class="card w-auto bg-base-100 shadow-xl">
+                            <figure class="px-4 pt-4">
+                                <img src="images/triangle.png" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title capitalize font-bold text-3xl">triangle</h2>
+                                <p>Area (A) = 0.5*base*height</p>
+                                <div class="parameter-input flex items-center">
+                                    <input type="number" id="triangleBase" class="w-24 px-4 py-2 rounded bg-slate-300 mr-2" placeholder="Base"><span class="mr-4">cm</span>
+                                    <input type="number" id="triangleHeight" class="w-24 px-4 py-2 rounded bg-slate-300 ml-4 mr-2" placeholder="Height"><span>cm</span>
+                                </div>
+                                <p class="capitalize font-semibold">the area of the triangle is <span  id="totalArea" class="font-extrabold" > ? </span>cm<sup>2</sup></p>
+                                <div class="card-actions w-full mt-4">
+                                    <button onclick="calculateTriangle()" class="btn btn-primary capitalize w-full">calculate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shape">
+                        <div class="card w-auto bg-base-100 shadow-xl">
+                            <figure class="px-4 pt-4">
+                                <img src="images/triangle.png" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title capitalize font-bold text-3xl">triangle</h2>
+                                <p>Area (A) = 0.5*base*height</p>
+                                <div class="parameter-input flex items-center">
+                                    <input type="number" id="triangleBase" class="w-24 px-4 py-2 rounded bg-slate-300 mr-2" placeholder="Base"><span class="mr-4">cm</span>
+                                    <input type="number" id="triangleHeight" class="w-24 px-4 py-2 rounded bg-slate-300 ml-4 mr-2" placeholder="Height"><span>cm</span>
+                                </div>
+                                <p class="capitalize font-semibold">the area of the triangle is <span  id="totalArea" class="font-extrabold" > ? </span>cm<sup>2</sup></p>
+                                <div class="card-actions w-full mt-4">
+                                    <button onclick="calculateTriangle()" class="btn btn-primary capitalize w-full">calculate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shape">
+                        <div class="card w-auto bg-base-100 shadow-xl">
+                            <figure class="px-4 pt-4">
+                                <img src="images/triangle.png" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title capitalize font-bold text-3xl">triangle</h2>
+                                <p>Area (A) = 0.5*base*height</p>
+                                <div class="parameter-input flex items-center">
+                                    <input type="number" id="triangleBase" class="w-24 px-4 py-2 rounded bg-slate-300 mr-2" placeholder="Base"><span class="mr-4">cm</span>
+                                    <input type="number" id="triangleHeight" class="w-24 px-4 py-2 rounded bg-slate-300 ml-4 mr-2" placeholder="Height"><span>cm</span>
+                                </div>
+                                <p class="capitalize font-semibold">the area of the triangle is <span  id="totalArea" class="font-extrabold" > ? </span>cm<sup>2</sup></p>
+                                <div class="card-actions w-full mt-4">
+                                    <button onclick="calculateTriangle()" class="btn btn-primary capitalize w-full">calculate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="result-container basis-1/4">
+                <div class="card w-auto bg-base-100 shadow-xl">
+                    <div class="card-body">
+                      <h2 class="card-title">Card title!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </main>
 
 
 
 
     <script src="js/main.js"></script>
+    <script src="js/tailwind.config.js"></script>
 </body>
+
 </html>
