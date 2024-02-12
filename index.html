@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body onscroll="displayResult()">
     <header class="w-3/4 mx-auto pt-8 pb-4">
         <div class="navbar bg-base-100">
             <div class="flex-1">
@@ -32,10 +32,10 @@
         </div>
     </header>
     <main class="pt-8">
-        <div class="main-banner lg:flex container mx-auto">
+        <div class="main-banner lg:flex container mx-auto relative ">
             <div class="shape-container basis-3/4">
-                <div class="shape-row lg:grid grid-cols-3 gap-3">
-                    <div class="shape">
+                <div class="shape-row lg:grid grid-cols-2 gap-3">
+                    <div class="shape rounded-xl m-4" onmouseenter="bigImg(this)" onmouseleave="normalImg(this)">
                         <div class="card w-auto bg-base-100 shadow-xl">
                             <figure class="px-4 pt-4">
                                 <img src="images/triangle.png" class="rounded-xl" />
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shape">
+                    <div class="shape rounded-xl m-4" onmouseenter="bigImg(this)" onmouseleave="normalImg(this)">
                         <div class="card w-auto bg-base-100 shadow-xl">
                             <figure class="px-4 pt-4">
                                 <img src="images/rectangle.png" class="rounded-xl" />
@@ -73,78 +73,79 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shape">
+                    <div class="shape rounded-xl m-4" onmouseenter="bigImg(this)" onmouseleave="normalImg(this)">
                         <div class="card w-auto bg-base-100 shadow-xl">
                             <figure class="px-4 pt-4">
-                                <img src="images/triangle.png" class="rounded-xl" />
+                                <img src="images/parallelogram.png" class="rounded-xl" />
                             </figure>
                             <div class="card-body items-center text-center">
-                                <h2 class="card-title capitalize font-bold text-3xl">triangle</h2>
-                                <p>Area (A) = 0.5*base*height</p>
+                                <h2 class="card-title capitalize font-bold text-3xl">parallelogram</h2>
+                                <p>Area (A) = Area (A) = Base * Height
+                                </p>
                                 <div class="parameter-input flex items-center">
-                                    <input type="number" id="triangleBase" class="w-24 px-4 py-2 rounded bg-slate-300 mr-2" placeholder="Base"><span class="mr-4">cm</span>
-                                    <input type="number" id="triangleHeight" class="w-24 px-4 py-2 rounded bg-slate-300 ml-4 mr-2" placeholder="Height"><span>cm</span>
+                                    <input type="number" id="parallelogramBase" class="w-24 px-4 py-2 rounded bg-slate-300 mr-2" placeholder="Base"><span class="mr-4">cm</span>
+                                    <input type="number" id="parallelogramHeight" class="w-24 px-4 py-2 rounded bg-slate-300 ml-4 mr-2" placeholder="Height"><span>cm</span>
                                 </div>
-                                <p class="capitalize font-semibold">the area of the triangle is <span  id="totalArea" class="font-extrabold" > ? </span>cm<sup>2</sup></p>
+                                <p class="capitalize font-semibold">the area of the parallelogram is <span  id="totalAreaParallelogram" class="font-extrabold" > ? </span>cm<sup>2</sup></p>
                                 <div class="card-actions w-full mt-4">
-                                    <button onclick="calculateTriangle()" class="btn btn-primary capitalize w-full">calculate</button>
+                                    <button onclick="calculateParallelogram()" class="btn btn-primary capitalize w-full">calculate</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="shape">
+                    <div class="shape rounded-xl m-4" onmouseenter="bigImg(this)" onmouseleave="normalImg(this)">
                         <div class="card w-auto bg-base-100 shadow-xl">
                             <figure class="px-4 pt-4">
-                                <img src="images/triangle.png" class="rounded-xl" />
+                                <img src="images/rhombus.png" class="rounded-xl" />
                             </figure>
                             <div class="card-body items-center text-center">
-                                <h2 class="card-title capitalize font-bold text-3xl">triangle</h2>
-                                <p>Area (A) = 0.5*base*height</p>
+                                <h2 class="card-title capitalize font-bold text-3xl">rhombus</h2>
+                                <p>Area (A) = 0.5*d1*d2</p>
                                 <div class="parameter-input flex items-center">
-                                    <input type="number" id="triangleBase" class="w-24 px-4 py-2 rounded bg-slate-300 mr-2" placeholder="Base"><span class="mr-4">cm</span>
-                                    <input type="number" id="triangleHeight" class="w-24 px-4 py-2 rounded bg-slate-300 ml-4 mr-2" placeholder="Height"><span>cm</span>
+                                    <input type="number" id="rhombusD1" class="w-24 px-4 py-2 rounded bg-slate-300 mr-2" placeholder="d1"><span class="mr-4">cm</span>
+                                    <input type="number" id="rhombusD2" class="w-24 px-4 py-2 rounded bg-slate-300 ml-4 mr-2" placeholder="d2"><span>cm</span>
                                 </div>
-                                <p class="capitalize font-semibold">the area of the triangle is <span  id="totalArea" class="font-extrabold" > ? </span>cm<sup>2</sup></p>
+                                <p class="capitalize font-semibold">the area of the rhombus is <span  id="totalAreaRhombus" class="font-extrabold" > ? </span>cm<sup>2</sup></p>
                                 <div class="card-actions w-full mt-4">
-                                    <button onclick="calculateTriangle()" class="btn btn-primary capitalize w-full">calculate</button>
+                                    <button onclick="calculateRhombus()" class="btn btn-primary capitalize w-full">calculate</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="shape">
+                    <div class="shape rounded-xl m-4" onmouseenter="bigImg(this)" onmouseleave="normalImg(this)">
                         <div class="card w-auto bg-base-100 shadow-xl">
                             <figure class="px-4 pt-4">
-                                <img src="images/triangle.png" class="rounded-xl" />
+                                <img src="images/pentagon.png" class="rounded-xl" />
                             </figure>
                             <div class="card-body items-center text-center">
-                                <h2 class="card-title capitalize font-bold text-3xl">triangle</h2>
-                                <p>Area (A) = 0.5*base*height</p>
+                                <h2 class="card-title capitalize font-bold text-3xl">pentagon</h2>
+                                <p>Area (A) =5/2*Side*Apothom</p>
                                 <div class="parameter-input flex items-center">
-                                    <input type="number" id="triangleBase" class="w-24 px-4 py-2 rounded bg-slate-300 mr-2" placeholder="Base"><span class="mr-4">cm</span>
-                                    <input type="number" id="triangleHeight" class="w-24 px-4 py-2 rounded bg-slate-300 ml-4 mr-2" placeholder="Height"><span>cm</span>
+                                    <input type="number" id="pentagonSide" class="w-24 px-4 py-2 rounded bg-slate-300 mr-2" placeholder="Side"><span class="mr-4">cm</span>
+                                    <input type="number" id="pentagonApothom" class="w-24 px-4 py-2 rounded bg-slate-300 ml-4 mr-2" placeholder="apothom"><span>cm</span>
                                 </div>
-                                <p class="capitalize font-semibold">the area of the triangle is <span  id="totalArea" class="font-extrabold" > ? </span>cm<sup>2</sup></p>
+                                <p class="capitalize font-semibold">the area of the triangle is <span  id="totalAreaPentagon" class="font-extrabold" > ? </span>cm<sup>2</sup></p>
                                 <div class="card-actions w-full mt-4">
-                                    <button onclick="calculateTriangle()" class="btn btn-primary capitalize w-full">calculate</button>
+                                    <button onclick="calculatePentagon()" class="btn btn-primary capitalize w-full">calculate</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="shape">
+                    <div class="shape rounded-xl m-4" onmouseenter="bigImg(this)" onmouseleave="normalImg(this)">
                         <div class="card w-auto bg-base-100 shadow-xl">
                             <figure class="px-4 pt-4">
-                                <img src="images/triangle.png" class="rounded-xl" />
+                                <img src="images/ellipse.png" class="rounded-xl" />
                             </figure>
                             <div class="card-body items-center text-center">
-                                <h2 class="card-title capitalize font-bold text-3xl">triangle</h2>
-                                <p>Area (A) = 0.5*base*height</p>
+                                <h2 class="card-title capitalize font-bold text-3xl">ellipse</h2>
+                                <p>Area (A) = pi*shortestSide*longestSide</p>
                                 <div class="parameter-input flex items-center">
-                                    <input type="number" id="triangleBase" class="w-24 px-4 py-2 rounded bg-slate-300 mr-2" placeholder="Base"><span class="mr-4">cm</span>
-                                    <input type="number" id="triangleHeight" class="w-24 px-4 py-2 rounded bg-slate-300 ml-4 mr-2" placeholder="Height"><span>cm</span>
+                                    <input type="number" id="ellipseShortest" class="w-24 px-4 py-2 rounded bg-slate-300 mr-2" placeholder="Shortest"><span class="mr-4">cm</span>
+                                    <input type="number" id="ellipseLongest" class="w-24 px-4 py-2 rounded bg-slate-300 ml-4 mr-2" placeholder="Longest"><span>cm</span>
                                 </div>
-                                <p class="capitalize font-semibold">the area of the triangle is <span  id="totalArea" class="font-extrabold" > ? </span>cm<sup>2</sup></p>
+                                <p class="capitalize font-semibold">the area of the ellipse is <span  id="totalAreaEllipse" class="font-extrabold" > ? </span>cm<sup>2</sup></p>
                                 <div class="card-actions w-full mt-4">
-                                    <button onclick="calculateTriangle()" class="btn btn-primary capitalize w-full">calculate</button>
+                                    <button onclick="calculateEllipse()" class="btn btn-primary capitalize w-full">calculate</button>
                                 </div>
                             </div>
                         </div>
@@ -153,8 +154,8 @@
                     
                 </div>
             </div>
-            <div class="result-container basis-1/4">
-                <div class="card w-auto bg-base-100 shadow-xl">
+            <div class="result-container basis-1/4 lg:static fixed top-16 right-10" id="resultDiv">
+                <div class="card w-auto backdrop-blur-lg border border-solid border-slate-300 shadow-xl">
                     <div class="card-body">
                       <h2 class="card-title">Card title!</h2>
                       <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -168,7 +169,7 @@
     </main>
 
 
-
+    
 
     <script src="js/main.js"></script>
     <script src="js/tailwind.config.js"></script>

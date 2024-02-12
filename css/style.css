@@ -1,0 +1,10 @@
+@media (max-width: 575.98px) {
+    main{
+        width: 95%;
+        margin: 0 auto;
+    }
+    #resultDiv{
+        display: none;
+        transition: all 5s;
+    }
+}
