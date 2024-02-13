@@ -4,12 +4,18 @@ function getValue(inputFieldId) {
     const InputText = parseFloat(inputField.value);
     return InputText;
 }
-function addToShowCase(shapeType,area){
-    const showCaseArea=document.getElementById('areaShowCaseOl');
-    const li=document.createElement('li');
+function addToShowCase(shapeType, area) {
+    const showCaseArea = document.getElementById('areaShowCaseOl');
+    const li = document.createElement('li');
     li.classList.add("items");
-    li.innerText='the area of the '+shapeType+' is '+ area+' cm(sq).';
+    li.innerHTML = 'the area of the ' + shapeType + ' is ' + area + ' cm(sq).<button id=convertBtn class="btn btn-success btn-sm text-white">Convert to Meter</button>';
     showCaseArea.appendChild(li);
+    //convert to meter 
+    document.getElementById('convertBtn').addEventListener('click', function converCmToM() {
+        area = area / 100;
+        li.innerHTML = 'the area of the ' + shapeType + ' is ' + area + ' m(sq).<button id=convertBtn class="btn btn-warning btn-sm text-white">Convert to Meter</button>';
+    })
+
 }
 /////common function to fetch data with id
 
@@ -29,8 +35,8 @@ function calculateTriangle() {
         totalArea.innerText = area;
     }
 
-    addToShowCase("triangle",area);
-    
+    addToShowCase("triangle", area);
+
 }
 //area of rectangle
 function calculateRectangle() {
@@ -48,7 +54,7 @@ function calculateRectangle() {
     } else {
         totalAreaRectangle.innerText = area;
     }
-    addToShowCase("rectangle",area)
+    addToShowCase("rectangle", area)
 }
 
 
@@ -64,7 +70,7 @@ function calculateParallelogram() {
     } else {
         totalAreaParallelogram.innerText = area;
     }
-    addToShowCase("parallelogram",area)
+    addToShowCase("parallelogram", area)
 }
 
 
@@ -81,7 +87,7 @@ function calculateRhombus() {
     } else {
         totalAreaRhombus.innerText = area;
     }
-    addToShowCase("rohmbus",area)
+    addToShowCase("rohmbus", area)
 }
 
 //area of pentagon
@@ -96,7 +102,7 @@ function calculatePentagon() {
     } else {
         totalAreaPentagon.innerText = area;
     }
-    addToShowCase("pentagon",area)
+    addToShowCase("pentagon", area)
 }
 
 //area of ellipse
@@ -112,13 +118,13 @@ function calculateEllipse() {
     } else {
         totalAreaEllipse.innerText = area;
     }
-    addToShowCase("ellipse",area)
+    addToShowCase("ellipse", area)
 }
 //bg change
 function bigImg(x) {
     x.style.backgroundColor = "tomato";
     x.style.color = "white";
-    
+
     x.childNodes[1].classList.remove("bg-base-100");
 }
 
@@ -131,6 +137,6 @@ function normalImg(x) {
 
 //on scroll
 function displayResult() {
-    const resultDiv=document.getElementById('resultDiv')
-    resultDiv.style.display='block';
+    const resultDiv = document.getElementById('resultDiv')
+    resultDiv.style.display = 'block';
 }
