@@ -8,6 +8,10 @@
         width: 95%;
         margin: 0 auto;
     }
+    .navbar{
+        display: block !important;
+        text-align: center;
+    }
     #resultDiv{
         display: none;
         transition: all 5s;

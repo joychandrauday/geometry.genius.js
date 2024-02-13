@@ -12,6 +12,8 @@ function addToShowCase(shapeType,area){
     showCaseArea.appendChild(li);
 }
 /////common function to fetch data with id
+
+
 //area of triangle
 function calculateTriangle() {
     const baseInput = document.getElementById('triangleBase');
