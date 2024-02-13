@@ -5,7 +5,7 @@
 }
 @media (max-width: 575.98px) {
     body{
-        background: tomato;
+        background: tomato !important;
     }
     main{
         width: 95%;
@@ -20,7 +20,7 @@
         transition: all 5s;
     }
     .result-container{
-        width: 95%;
-        top: 5%;
+        width: 95% !important;
+        top: 5% !important;
     }
 }
