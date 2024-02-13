@@ -17,7 +17,7 @@
         transition: all 5s;
     }
     .result-container{
-        top: 20%;
-        left: 25%;
+        width: 95%;
+        top: 5%;
     }
 }
