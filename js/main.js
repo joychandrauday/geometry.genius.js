@@ -1,3 +1,17 @@
+/////common function to fetch data with id
+function getValue(inputFieldId) {
+    const inputField = document.getElementById(inputFieldId)
+    const InputText = parseFloat(inputField.value);
+    return InputText;
+}
+function addToShowCase(shapeType,area){
+    const showCaseArea=document.getElementById('areaShowCaseOl');
+    const li=document.createElement('li');
+    li.classList.add("items");
+    li.innerText='the area of the '+shapeType+' is '+ area+' cm(sq).';
+    showCaseArea.appendChild(li);
+}
+/////common function to fetch data with id
 //area of triangle
 function calculateTriangle() {
     const baseInput = document.getElementById('triangleBase');
@@ -12,6 +26,9 @@ function calculateTriangle() {
     } else {
         totalArea.innerText = area;
     }
+
+    addToShowCase("triangle",area);
+    
 }
 //area of rectangle
 function calculateRectangle() {
@@ -29,16 +46,10 @@ function calculateRectangle() {
     } else {
         totalAreaRectangle.innerText = area;
     }
+    addToShowCase("rectangle",area)
 }
 
 
-/////common function to fetch data with id
-function getValue(inputFieldId) {
-    const inputField = document.getElementById(inputFieldId)
-    const InputText = parseFloat(inputField.value);
-    return InputText;
-}
-/////common function to fetch data with id
 
 function calculateParallelogram() {
     const base = getValue('parallelogramBase');
@@ -51,6 +62,7 @@ function calculateParallelogram() {
     } else {
         totalAreaParallelogram.innerText = area;
     }
+    addToShowCase("parallelogram",area)
 }
 
 
@@ -67,6 +79,7 @@ function calculateRhombus() {
     } else {
         totalAreaRhombus.innerText = area;
     }
+    addToShowCase("rohmbus",area)
 }
 
 //area of pentagon
@@ -81,6 +94,7 @@ function calculatePentagon() {
     } else {
         totalAreaPentagon.innerText = area;
     }
+    addToShowCase("pentagon",area)
 }
 
 //area of ellipse
@@ -96,7 +110,7 @@ function calculateEllipse() {
     } else {
         totalAreaEllipse.innerText = area;
     }
-
+    addToShowCase("ellipse",area)
 }
 //bg change
 function bigImg(x) {
@@ -108,6 +122,7 @@ function bigImg(x) {
 
 function normalImg(x) {
     x.style.backgroundColor = "white";
+    x.style.color = "black";
 }
 
 
@@ -116,6 +131,4 @@ function normalImg(x) {
 function displayResult() {
     const resultDiv=document.getElementById('resultDiv')
     resultDiv.style.display='block';
-
-
 }

@@ -1,3 +1,8 @@
+.items{
+    list-style: decimal;
+    text-transform: capitalize;
+    font-weight: 600;
+}
 @media (max-width: 575.98px) {
     main{
         width: 95%;
