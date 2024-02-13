@@ -11,9 +11,14 @@
         width: 95%;
         margin: 0 auto;
     }
+    header{
+        width: 95% !important;
+        
+    }
     .navbar{
         display: block !important;
         text-align: center;
+        border-radius: 16px !important;
     }
     #resultDiv{
         display: none;
